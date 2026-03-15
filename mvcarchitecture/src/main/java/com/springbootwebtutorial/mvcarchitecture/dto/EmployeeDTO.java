@@ -1,0 +1,27 @@
+package com.springbootwebtutorial.mvcarchitecture.dto;
+
+
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class EmployeeDTO {
+
+    private Long id;
+    @NotNull(message = "Required field of Employee : name")
+    private String name;
+    private String email;
+    private Integer age;
+    private LocalDate dateOfJoining;
+    private Boolean isActive;
+
+}
